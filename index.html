@@ -1,276 +1,296 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himal - Developer & Trader 
-</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Himal - Developer & Trader</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            background: linear-gradient(135deg, #f5e6d3 0%, #e8d5b7 100%);
-            color: #2c2416;
-            line-height: 1.6;
-            min-height: 100vh;
-            padding: 20px;
-        }
+body {
+font-family: 'Georgia', 'Times New Roman', serif;
+background: linear-gradient(135deg, #f5e6d3 0%, #e8d5b7 100%);
+color: #2c2416;
+line-height: 1.6;
+min-height: 100vh;
+padding: 20px;
+}
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255, 248, 240, 0.9);
-            padding: 60px 50px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(139, 115, 85, 0.2);
-            position: relative;
-        }
+.container {
+max-width: 800px;
+margin: 0 auto;
+background: rgba(255, 248, 240, 0.9);
+padding: 60px 50px;
+box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+border: 1px solid rgba(139, 115, 85, 0.2);
+position: relative;
+}
 
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                repeating-linear-gradient(
-                    0deg,
-                    transparent,
-                    transparent 2px,
-                    rgba(139, 115, 85, 0.03) 2px,
-                    rgba(139, 115, 85, 0.03) 3px
-                );
-            pointer-events: none;
-        }
+.container::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background:
+repeating-linear-gradient(
+0deg,
+transparent,
+transparent 2px,
+rgba(139, 115, 85, 0.03) 2px,
+rgba(139, 115, 85, 0.03) 3px
+);
+pointer-events: none;
+}
 
-        header {
-            border-bottom: 2px solid #8b7355;
-            padding-bottom: 30px;
-            margin-bottom: 40px;
-            position: relative;
-        }
+header {
+border-bottom: 2px solid #8b7355;
+padding-bottom: 30px;
+margin-bottom: 40px;
+position: relative;
+}
 
-        h1 {
-            font-size: 3em;
-            font-weight: 400;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            color: #3d3020;
-        }
+h1 {
+font-size: 3em;
+font-weight: 400;
+letter-spacing: 2px;
+margin-bottom: 10px;
+color: #3d3020;
+}
 
-        .tagline {
-            font-size: 1.1em;
-            color: #6b5d4f;
-            font-style: italic;
-        }
+.tagline {
+font-size: 1.1em;
+color: #6b5d4f;
+font-style: italic;
+}
 
-        section {
-            margin-bottom: 50px;
-            position: relative;
-        }
+section {
+margin-bottom: 50px;
+position: relative;
+}
 
-        h2 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            color: #3d3020;
-            font-weight: 400;
-            border-bottom: 1px solid rgba(139, 115, 85, 0.3);
-            padding-bottom: 10px;
-        }
+h2 {
+font-size: 1.8em;
+margin-bottom: 20px;
+color: #3d3020;
+font-weight: 400;
+border-bottom: 1px solid rgba(139, 115, 85, 0.3);
+padding-bottom: 10px;
+}
 
-        .bio {
-            font-size: 1.15em;
-            line-height: 1.8;
-            color: #4a3f2f;
-        }
+.bio {
+font-size: 1.15em;
+line-height: 1.8;
+color: #4a3f2f;
+}
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
+.skills {
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+margin-top: 20px;
+}
 
-        .skill-tag {
-            background: rgba(139, 115, 85, 0.15);
-            padding: 10px 20px;
-            border: 1px solid rgba(139, 115, 85, 0.3);
-            font-size: 0.95em;
-            color: #3d3020;
-            transition: all 0.3s ease;
-        }
+.skill-tag {
+background: rgba(139, 115, 85, 0.15);
+padding: 10px 20px;
+border: 1px solid rgba(139, 115, 85, 0.3);
+font-size: 0.95em;
+color: #3d3020;
+transition: all 0.3s ease;
+}
 
-        .skill-tag:hover {
-            background: rgba(139, 115, 85, 0.25);
-            transform: translateY(-2px);
-        }
+.skill-tag:hover {
+background: rgba(139, 115, 85, 0.25);
+transform: translateY(-2px);
+}
 
-          .books {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
+.books {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 30px;
+margin-top: 30px;
+}
 
-        .book-card {
-            background: rgba(255, 248, 240, 0.8);
-            border: 1px solid rgba(139, 115, 85, 0.3);
-            overflow: hidden;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+.book-card {
+background: rgba(255, 248, 240, 0.8);
+border: 1px solid rgba(139, 115, 85, 0.3);
+overflow: hidden;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        .book-card:hover {
-            transform: scale(1.08) translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-            border-color: #8b7355;
-        }
+.book-card:hover {
+transform: scale(1.08) translateY(-5px);
+box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+border-color: #8b7355;
+}
 
-        .book-cover {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            display: block;
-        }
+.book-cover {
+width: 100%;
+height: 280px;
+object-fit: cover;
+display: block;
+}
 
-        .book-info {
-            padding: 15px;
-            text-align: center;
-        }
+.book-info {
+padding: 15px;
+text-align: center;
+}
 
-        .book-title {
-            font-size: 1em;
-            font-weight: 600;
-            color: #3d3020;
-            margin-bottom: 5px;
-        }
+.book-title {
+font-size: 1em;
+font-weight: 600;
+color: #3d3020;
+margin-bottom: 5px;
+}
 
-        .book-author {
-            font-size: 0.85em;
-            color: #6b5d4f;
-            font-style: italic;
-        }
+.book-author {
+font-size: 0.85em;
+color: #6b5d4f;
+font-style: italic;
+}
 
-        .projects {
-            text-align: center;
-            padding: 30px;
-            background: rgba(139, 115, 85, 0.08);
-            border: 1px dashed rgba(139, 115, 85, 0.3);
-            font-style: italic;
-            color: #6b5d4f;
-        }
+.projects {
+text-align: center;
+padding: 30px;
+background: rgba(139, 115, 85, 0.08);
+border: 1px dashed rgba(139, 115, 85, 0.3);
+font-style: italic;
+color: #6b5d4f;
+}
 
-        .social-links {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-            margin-top: 20px;
-        }
+.social-links {
+display: flex;
+gap: 30px;
+justify-content: center;
+margin-top: 20px;
+}
 
-        .social-links a {
-            color: #3d3020;
-            text-decoration: none;
-            font-size: 1.1em;
-            padding: 10px 25px;
-            border: 2px solid #8b7355;
-            transition: all 0.3s ease;
-            background: rgba(255, 248, 240, 0.5);
-        }
+.social-links a {
+color: #3d3020;
+text-decoration: none;
+font-size: 1.1em;
+padding: 10px 25px;
+border: 2px solid #8b7355;
+transition: all 0.3s ease;
+background: rgba(255, 248, 240, 0.5);
+}
 
-        .social-links a:hover {
-            background: #8b7355;
-            color: #fff8f0;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
-        }
+.social-links a:hover {
+background: #8b7355;
+color: #fff8f0;
+transform: translateY(-3px);
+box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
+}
 
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 2px solid #8b7355;
-            color: #6b5d4f;
-            font-size: 0.9em;
-        }
+footer {
+text-align: center;
+margin-top: 60px;
+padding-top: 30px;
+border-top: 2px solid #8b7355;
+color: #6b5d4f;
+font-size: 0.9em;
+}
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 40px 30px;
-            }
+@media (max-width: 768px) {
+.container {
+padding: 40px 30px;
+}
 
-            h1 {
-                font-size: 2.2em;
-            }
+h1 {
+font-size: 2.2em;
+}
 
-            .skills {
-                gap: 10px;
-            }
+.skills {
+gap: 10px;
+}
 
-            .social-links {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-    </style>
+.social-links {
+flex-direction: column;
+gap: 15px;
+}
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Himal</h1>
-            <p class="tagline">Developer & Trader🦇</p>
-        </header>
+<div class="container">
+<header>
+<h1>Himal</h1>
+<p class="tagline">Developer & Trader</p>
+</header>
 
-        <section>
-            <h2>About</h2>
-            <p class="bio">
-                Hi, I am Himal, Business student. Trader by day, developer by night :)
-            </p>
-        </section>
+<section>
+<h2>About</h2>
+<p class="bio">
+Hi, I am Himal, Business student. Trader by day, developer by night :).
+</p>
+</section>
 
-        <section>
-            <h2>Skills</h2>
-            <div class="skills">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Data Analysis/Science</span>
-                <span class="skill-tag">Forex</span>
-            </div>
-        </section>
+<section>
+<h2>Skills</h2>
+<div class="skills">
+<span class="skill-tag">Python</span>
+<span class="skill-tag">DataAnalysis</span>
+<span class="skill-tag">Forex</span>
+</div>
+</section>
 
-        <section>
-            <h2>Books I've Read</h2>
-            <ul class="books">
-                <li>Letters from a Stoic by Seneca</li>
-                <li>Meditations by Marcus Aurelius</li>
-                <li>The Alchemist by Paulo Coelho</li>
-            </ul>
-        </section>
+<section>
+<h2>Books I've Read</h2>
+<div class="books">
+<div class="book-card">
+<img src="https://m.media-amazon.com/images/I/71Tj17iSKqL._SY466_.jpg" alt="Letters from a Stoic" class="book-cover">
+<div class="book-info">
+<div class="book-title">Letters from a Stoic</div>
+<div class="book-author">Seneca</div>
+</div>
+</div>
 
-        <section>
-            <h2>Projects</h2>
-            <div class="projects">
-                <p>Currently building... Stay tuned.</p>
-            </div>
-        </section>
+<div class="book-card">
+<img src="https://m.media-amazon.com/images/I/71aG+xDKSYL._SY466_.jpg" alt="Meditations" class="book-cover">
+<div class="book-info">
+<div class="book-title">Meditations</div>
+<div class="book-author">Marcus Aurelius</div>
+</div>
+</div>
 
-        <section>
-            <h2>Connect</h2>
-            <div class="social-links">
-                <a href="https://x.com/Himal_XaI" target="_blank">Twitter</a>
-                <a href="https://github.com/HimalKunwar" target="_blank">GitHub</a>
-                <a href="https://www.instagram.com/himal.kunwar_/" target="_blank">Instagram</a>
-            </div>
-        </section>
+<div class="book-card">
+<img src="https://m.media-amazon.com/images/I/71aFt4+OTOL._SY466_.jpg" alt="The Alchemist" class="book-cover">
+<div class="book-info">
+<div class="book-title">The Alchemist</div>
+<div class="book-author">Paulo Coelho</div>
+</div>
+</div>
+</div>
+</section>
 
-        <footer>
-            <p>© 2025 Himal. All rights reserved.</p>
-        </footer>
-    </div>
+<section>
+<h2>Projects</h2>
+<div class="projects">
+<p>Currently building... Stay tuned.</p>
+</div>
+</section>
+
+<section>
+<h2>Connect</h2>
+<div class="social-links">
+<a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+<a href="https://github.com/yourusername" target="_blank">GitHub</a>
+<a href="https://linkedin.com/in/yourusername" target="_blank">Instagram</a>
+</div>
+</section>
+
+<footer>
+<p>© 2025 Himal. All rights reserved.</p>
+</footer>
+</div>
 </body>
 </html>

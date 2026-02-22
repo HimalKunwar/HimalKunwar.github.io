@@ -111,26 +111,51 @@
             transform: translateY(-2px);
         }
 
-        .books {
-            list-style: none;
+          .books {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
         }
 
-        .books li {
-            padding: 15px 0;
-            border-bottom: 1px dashed rgba(139, 115, 85, 0.2);
-            font-size: 1.05em;
-            color: #4a3f2f;
+        .book-card {
+            background: rgba(255, 248, 240, 0.8);
+            border: 1px solid rgba(139, 115, 85, 0.3);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .books li:last-child {
-            border-bottom: none;
+        .book-card:hover {
+            transform: scale(1.08) translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            border-color: #8b7355;
         }
 
-        .books li::before {
-            content: '▸';
-            margin-right: 15px;
-            color: #8b7355;
-            font-size: 1.2em;
+        .book-cover {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .book-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .book-title {
+            font-size: 1em;
+            font-weight: 600;
+            color: #3d3020;
+            margin-bottom: 5px;
+        }
+
+        .book-author {
+            font-size: 0.85em;
+            color: #6b5d4f;
+            font-style: italic;
         }
 
         .projects {
